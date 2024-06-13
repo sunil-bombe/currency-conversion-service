@@ -10,7 +10,7 @@ public class CurrencyConversionBeans {
 	
 	private String to;
 	
-	private BigDecimal multipleConversion;
+	private BigDecimal conversionMultiple;
 	
 	private BigDecimal quantity;
 	
@@ -18,14 +18,18 @@ public class CurrencyConversionBeans {
 	
 	private int port;
 
-	public CurrencyConversionBeans(Long id, String from, String to, BigDecimal multipleConversion, BigDecimal quantity, BigDecimal totalCalculatedAmount, int port) {
+	public CurrencyConversionBeans(Long id, String from, String to, BigDecimal conversionMultiple, BigDecimal quantity, BigDecimal totalCalculatedAmount, int port) {
 		this.id = id;
 		this.from = from;
 		this.to = to;
-		this.multipleConversion = multipleConversion;
+		this.conversionMultiple = conversionMultiple;
 		this.quantity = quantity;
 		this.totalCalculatedAmount = totalCalculatedAmount;
 		this.port = port;
+	}
+
+	public CurrencyConversionBeans() {
+		// TODO Auto-generated constructor stub
 	}
 
 	public Long getId() {
@@ -52,12 +56,12 @@ public class CurrencyConversionBeans {
 		this.to = to;
 	}
 
-	public BigDecimal getMultipleConversion() {
-		return multipleConversion;
+	public BigDecimal getConversionMultiple() {
+		return conversionMultiple;
 	}
 
-	public void setMultipleConversion(BigDecimal multipleConversion) {
-		this.multipleConversion = multipleConversion;
+	public void setConversionMultiple(BigDecimal conversionMultiple) {
+		this.conversionMultiple = conversionMultiple;
 	}
 
 	public BigDecimal getQuantity() {
@@ -84,6 +88,16 @@ public class CurrencyConversionBeans {
 		this.port = port;
 	}
 
+	@Override
+	public String toString() {
+		return "CurrencyConversionBeans [id=" + id + ", from=" + from + ", to=" + to + ", conversionMultiple="
+				+ conversionMultiple + ", quantity=" + quantity + ", totalCalculatedAmount=" + totalCalculatedAmount
+				+ ", port=" + port + "]";
+	}
+	
+	
+
+	
 	
 
 	
